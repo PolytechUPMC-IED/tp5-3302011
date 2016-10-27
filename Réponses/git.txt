@@ -1,0 +1,66 @@
+PARTIE 1
+
+EXERCICE 1
+
+1- Nous tapons les commandes suivantes pour configurer Git
+
+3302011@pc4069:~/Bureau/Informatique/OPI/TP5$ git config --global user.name "3302011"
+3302011@pc4069:~/Bureau/Informatique/OPI/TP5$ git config --global user.email "fatinealj@hotmail.fr"
+3302011@pc4069:~/Bureau/Informatique/OPI/TP5$ git config --global color.ui auto
+
+Git va associer ce qui est entre les "" à l'argument d'avant. 
+
+
+2- On execute la commande et des fichiers cachés se créent. On peut les visualiser à l'aide de la commande ls -a. Ces fichiers sont:
+ .
+ ..
+ .git
+
+3- On crée un fichier debut.txt.
+
+4- En tapant la commande git status un message s'affiche. Ce message indique que le fichier a bien été crée "fichiers présents" mais non ajouté à l'index "non suivis" et que si on veut l'ajouter il faut taper git add debut.txt "utilisez "git add <fichier>..." pour inclure dans ce qui sera validé". 
+
+5- On tape git add debut.txt puis git status et un nouveau message indiquant que le fichier a été ajouté dans l'index s'affiche "nouveau fichier: debut.txt". 
+
+6- On effectue la commande git commit. Ceci nous permet de commit l'ensemble des changements dans l'object store donc d'enregistrer les modifications de notre fichier sur l'index.
+
+7- On tape git status. Le fichier modifié a bien été ajouté à l'index "sur la branche master". 
+
+8- La commande affiche les dernières modifications (Un superMessage) ainsi que les différences entre les différentes versions obtenues. Cette dernière option est possible grâce à la commande -p de git log.
+
+9- git diff affiche les modifications. Un message "-test" apparait et "+C'est les vacances les gars !!!" indiquant que dans la nouvelle version le message test a été supprimé et l'autre ajouté. 
+
+EXERCICE 2
+
+1 - On a crée une branche test dans l'index. git branch permet de lister toutes les branches de l'index. 
+
+2- On modifie.
+
+3- On crée milieu.txt puis git checkout test puis git add milieu.txt et git commit -m milieu.txt. Un message apparait indiquant que le fichier a bien été modifié et ajouté à l'index. 
+
+4- La commande nous permet de visualiser là où on en est c'est-à-dire les différents branches et leur contenu. On retrouve la branche master et la branche crée test contenant le fichier milieu.txt 
+
+5- La première commande nous permet de basculer sur la branche master. La seconde merge les infos contenues par la branche test sur la branche master et la troisième commande nous permet de voir que le fichier contenu par la branche test se trouve bien sur la branche master également. ( Si on avait plusieurs fichiers, tous les fichiers auraient basculé sur la branche master). 
+
+6- On modifie les fichiers dans test et master. On git add, git commit sur master puis bascule sur test et on fait pareil. git merge test et on merge le tout. Un message de conflit s'affiche nous infiquant que la fusion a échoué et qu'il faut regler cela puis remerger. 
+
+7- On règle le conflit en modifiant le message dans le fichier milieu.txt du master et en git add et git commit puis git merge. Un message indiquant que le fichier est déjà à jour s'affiche. Le problème est réglé. 
+
+
+8- On se met sur la branche master et on supprime la branche test. 
+
+
+EXERCICE 3
+
+DONE
+
+PARTIE 2
+
+EXERCICE 4
+
+1- Voir Makefile. On crée des variables CC CFLAGS LDLIBS pour que ce soit plus rapide. 
+
+2- clean pour supprimer .o et éxecutables
+
+3- On utilise les règles 
+

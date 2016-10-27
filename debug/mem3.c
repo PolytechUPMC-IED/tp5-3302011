@@ -11,8 +11,10 @@ int main(void)
   p = malloc(size * sizeof(int*));
   for(i = 0 ; i < size ; i++)
     p[i] =  malloc(size * sizeof(int));
-
+ 
   for( i = 0 ; i < size ; i++)
     free(p[i]);
+    
+  free(p); 
   return EXIT_SUCCESS;     
 }

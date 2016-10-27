@@ -1,0 +1,23 @@
+EXERCICE 5
+
+
+1- Done message hello you s'affiche
+
+2- on lance la commande et on observe le contenu du fichier ainsi que le nombre d'erreurs (ici 0)
+
+3- On observe in use at exit 0 bytes All heap blocks were freed donc 0 bit alloués dans la mémoire en sortie, ce qui indique qu'on a bien le free dans le fichier c. Pas d'erreurs. 
+
+4- On compile et on lance. On observe une erreur de segmentation. 
+
+5- L'erreur se trouve ligne 6. Valgrind fourni également des infos sur le type d'erreur "memory error detector" "Invalid write of size 4". 
+
+6- On corrige l'erreur. Le tableau n'est pas initialisé on tape  p=(int *)malloc(size*sizeof(int)); Voir mem.c
+
+7 - Voir mem2.c
+
+8- On nous explique qu'il y a 1 variable place mémoire qui n'est pas libérée. Par exemple en tapant 2 comme nombre on a 3 allocations de mémoire et 2 seulement qui sont libérées. 
+
+
+9- Pas de ligne fautive. Il manquait une libération de mémoire à la fin. 
+
+10 - On effectue les commandes. En ajoutant le free(p) à la fin on libère le p. Voir mem3.c
